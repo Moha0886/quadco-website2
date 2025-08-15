@@ -1,0 +1,54 @@
+/* Contact Form 7 inspired styles for feedback and validation */
+.contact-feedback {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  border: 2px solid #00a0d2;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.contact-feedback.success {
+  border-color: #46b450;
+  color: #207245;
+  background: #f6fff8;
+}
+.contact-feedback.error {
+  border-color: #dc3232;
+  color: #dc3232;
+  background: #fff6f6;
+}
+.contact-feedback.warning {
+  border-color: #ffb900;
+  color: #b38600;
+  background: #fffbe6;
+}
+.contact-feedback.info {
+  border-color: #00a0d2;
+  color: #007fa3;
+  background: #f0faff;
+}
+.contact-spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #23282d;
+  opacity: 0.75;
+  position: relative;
+  margin-left: 12px;
+}
+.contact-spinner::before {
+  content: '';
+  position: absolute;
+  background: #fbfbfc;
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  transform-origin: 8px 8px;
+  animation: contact-spin 1s linear infinite;
+}
+@keyframes contact-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
